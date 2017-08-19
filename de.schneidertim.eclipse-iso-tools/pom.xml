@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <groupId>de.schneidertim.eclipse-iso-tools</groupId>
+  <artifactId>de.schneidertim.eclipse-iso-tools.parent</artifactId>
+  <version>0.1.0-SNAPSHOT</version> <!-- This version should match the version of your project in the MANIFEST.MF-->
+  <packaging>pom</packaging>
+
+<modules>
+	<module>../de.schneidertim.eclipse-iso-tools.ui</module>
+	<module>../de.schneidertim.eclipse-iso-tools.feature</module>
+	<module>../de.schneidertim.eclipse-iso-tools.repository</module>
+</modules> 
+ 
+<properties>
+	<tycho.version>0.26.0</tycho.version>
+	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<neon-repo.url>http://download.eclipse.org/releases/neon</neon-repo.url>
+</properties>
+
+<repositories>
+	<repository>
+		<id>eclipse-neon</id>
+		<url>${neon-repo.url}</url>
+		<layout>p2</layout>
+	</repository>
+		<repository>
+		<id>java-iso-tools</id>
+		<url>http://localhost/mirrors/java-iso-tools/</url>
+		<layout>p2</layout>
+	</repository>
+</repositories>
+
+ <build>
+  <plugins>
+   <plugin>
+    <groupId>org.eclipse.tycho</groupId>
+    <artifactId>tycho-maven-plugin</artifactId>
+    <version>${tycho.version}</version>
+    <extensions>true</extensions>
+   </plugin>
+
+   <plugin>
+    <groupId>org.eclipse.tycho</groupId>
+    <artifactId>target-platform-configuration</artifactId>
+    <version>${tycho.version}</version>
+    <configuration>
+     <environments>
+      <environment>
+       <os>linux</os>
+       <ws>gtk</ws>
+       <arch>x86</arch>
+      </environment>
+      <environment>
+       <os>linux</os>
+       <ws>gtk</ws>
+       <arch>x86_64</arch>
+      </environment>
+      <environment>
+       <os>win32</os>
+       <ws>win32</ws>
+       <arch>x86</arch>
+      </environment>
+      <environment>
+       <os>win32</os>
+       <ws>win32</ws>
+       <arch>x86_64</arch>
+      </environment>
+      <environment>
+       <os>macosx</os>
+       <ws>cocoa</ws>
+       <arch>x86_64</arch>
+      </environment>
+     </environments>
+    </configuration>
+   </plugin>
+  </plugins>
+ </build>
+
+</project>

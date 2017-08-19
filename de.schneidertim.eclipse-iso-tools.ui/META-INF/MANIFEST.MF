@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Eclipse ISO-Tools UI
+Bundle-SymbolicName: de.schneidertim.eclipse-iso-tools.ui;singleton:=true
+Bundle-Version: 0.1.0.qualifier
+Bundle-Activator: de.schneidertim.eclipse_iso_tools.ui.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.github.stephenc.java-iso-tools.iso9660-writer,
+ org.eclipse.ui.navigator.resources,
+ org.eclipse.core.resources,
+ com.github.stephenc.java-iso-tools.sabre,
+ org.eclipse.swt
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy

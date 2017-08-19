@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/de.schneidertim.eclipse_iso_tools.feature_0.1.0.qualifier.jar" id="de.schneidertim.eclipse_iso_tools.feature" version="0.1.0.qualifier">
+      <category name="ISOTools"/>
+   </feature>
+   <category-def name="ISOTools" label="ISO Tools"/>
+</site>
